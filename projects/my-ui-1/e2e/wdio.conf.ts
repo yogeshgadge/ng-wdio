@@ -10,7 +10,7 @@ export const config: Options.Testrunner = {
     autoCompileOpts: {
         autoCompile: true,
         tsNodeOpts: {
-            project: './projects/my-ui-1/src/tsconfig.json',
+            project: './tsconfig.json',
             transpileOnly: true
         }
     },
@@ -33,7 +33,7 @@ export const config: Options.Testrunner = {
     // will be called from there.
     //
     specs: [
-        './projects/my-ui-1/src/e2e'
+        'specs/**.ts'
     ],
     // Patterns to exclude.
     exclude: [
