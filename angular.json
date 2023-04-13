@@ -68,7 +68,8 @@
               "browserTarget": "my-ui-1:build:production"
             },
             "development": {
-              "browserTarget": "my-ui-1:build:development"
+              "browserTarget": "my-ui-1:build:development",
+              "port": 4400
             }
           },
           "defaultConfiguration": "development"
