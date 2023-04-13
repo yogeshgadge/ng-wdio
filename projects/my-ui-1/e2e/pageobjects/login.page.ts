@@ -1,11 +1,11 @@
 import { ChainablePromiseElement } from 'webdriverio';
 
-import Page from '../pageobjects/page';
+import { Page } from './page';
 
 /**
  * sub page containing specific selectors and methods for a specific page
  */
-class LoginPage extends Page {
+export class LoginPage extends Page {
     /**
      * define selectors using getter methods
      */
@@ -34,9 +34,8 @@ class LoginPage extends Page {
     /**
      * overwrite specific options to adapt it to page object
      */
-    public open () {
+    public override open () {
         return super.open('login');
     }
 }
 
-export default new LoginPage();

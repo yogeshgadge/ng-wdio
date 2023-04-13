@@ -10,7 +10,7 @@ export const config: Options.Testrunner = {
     autoCompileOpts: {
         autoCompile: true,
         tsNodeOpts: {
-            project: './tsconfig.json',
+            project: './projects/my-ui-1/e2e/tsconfig.badwdio.json',
             transpileOnly: true
         }
     },
@@ -69,11 +69,16 @@ export const config: Options.Testrunner = {
         maxInstances: 5,
         //
         browserName: 'chrome',
-        acceptInsecureCerts: true
+        acceptInsecureCerts: true,
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
+
+        // eslint-disable-next-line @typescript-eslint/naming-convention
+        'wdio:devtoolsOptions': {
+          headless: false
+        }
     }],
     //
     // ===================
